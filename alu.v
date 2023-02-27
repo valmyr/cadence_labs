@@ -1,8 +1,8 @@
 module ula#(localparam WIDTH = 8)(
     input [WIDTH:0] in_a,
                     in_b,
-    input [3:0]     opcode 
-    output [WIDTH:0] alu_out,
+    input [3:0]     opcode,
+    output reg [WIDTH:0] alu_out,
     output _a_is_zero
 );
     assign _a_is_zero = (in_a == 0);//verification A
