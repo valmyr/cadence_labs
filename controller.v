@@ -24,7 +24,7 @@ module controller#(localparam Width = 3)(input rst,
         reg [3:0] current_state, next_state;
         always@(*)begin
             case(current_state)
-                 INST_ADDR : next_state = rst  ? 0 : INST_FETCH;
+                 INST_ADDR : next_state = INST_FETCH;
                  INST_FETCH: next_state = INST_LOAD            ;
                  INST_LOAD : next_state = IDLE                 ;
                  IDLE      : next_state = OP_ADDR              ;
